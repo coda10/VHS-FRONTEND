@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class AdmindashboardService {
 
-  //BAKEND_URL = 'https://vhsbackend.herokuapp.com';
-   BAKEND_URL = 'http://localhost:3000';
+   BAKEND_URL = 'https://vhsbackend.herokuapp.com';
+   //BAKEND_URL = 'http://localhost:3000';
 
   constructor(private http: HttpClient) { }
   

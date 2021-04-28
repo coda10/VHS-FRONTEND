@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class AdminauthService {
 
-  // BAKEND_URL = 'https://vhsbackend.herokuapp.com';
-   BAKEND_URL = 'http://localhost:3000';
+   BAKEND_URL = 'https://vhsbackend.herokuapp.com';
+   //BAKEND_URL = 'http://localhost:3000';
 
   registerAdmin(data: any){
     return this.http.post(`${this.BAKEND_URL}/auth/admin/registration`, data);

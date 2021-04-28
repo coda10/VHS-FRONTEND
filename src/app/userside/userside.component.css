@@ -1,3 +1,8 @@
+.container{
+  /* align-items:stretch; */
+  font-size: 135%;
+}
+
 header {
 	padding: 156px 0 100px;
   }
