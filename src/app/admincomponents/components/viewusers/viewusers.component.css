@@ -3,7 +3,7 @@ i {
 }
 
 
-/* table {
+ table {
     border-collapse: collapse;
     width: 100%;
     margin-top: 1%;
@@ -17,7 +17,7 @@ i {
   tr:nth-child(even){background-color: #f2f2f2}
   
   th {
-    background-color: #4CAF50;
+    /* background-color: #4CAF50; */
     color: white;
   }
 
@@ -26,4 +26,4 @@ i {
       width: 60%;
     margin-left: 20%;
     margin-top: 5%;
-  } */
+  } 
