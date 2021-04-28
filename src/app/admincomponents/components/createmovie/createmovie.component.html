@@ -1,0 +1,42 @@
+<div class="container">
+    <h1>Create Movie</h1>
+    <form [formGroup]="movie" (ngSubmit)="createMovie()">
+      <div class="row">
+        <div class="col-25">
+          <label for="movietitle">Title</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="movietitle" name="movietitle" placeholder="Movie Title" formControlName="movietitle">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="moviegenre">Genre</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="moviegenre" name="moviegenre" placeholder="Movie Genre" formControlName="moviegenre">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="moviecostperday">Cost/Day</label>
+        </div>
+        <div class="col-75">
+          <input type="number" id="moviecostperday" name="moviecostperday" placeholder="Cost per day" formControlName="moviecostperday">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="moviefile">Movie Flie</label>
+        </div>
+        <div class="col-75">
+          <input type="file" id="moviefile" name="moviefile" #moviefile>
+        </div>
+      </div>
+      
+      <div class="row">
+        <!-- <input type="submit" value="Submit"> -->
+        <button type="submit">Create</button>
+      </div>
+    </form>
+  </div>

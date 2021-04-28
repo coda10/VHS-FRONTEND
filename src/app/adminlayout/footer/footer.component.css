@@ -1,0 +1,17 @@
+footer{
+    position: fixed;
+    bottom: 5px;
+}
+
+.footer-distributed{
+    background-color: rgb(247, 238, 238);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    
+    padding: 15px 50px;
+    margin-top: 80px;
+    text-align: center;
+}

@@ -1,0 +1,24 @@
+
+<div class="adminlogin-bg-image">
+  <div class="login">
+    <h1>VHS Admin Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
+        <div>
+          <input type="text" placeholder="Username" id="username" formControlName="username"> 
+        </div>
+        <div>
+          <input type="password" placeholder="password" id="password" formControlName="password"> 
+        </div>
+    <br>
+    <a routerLink="/admin/registration" class="regis">Register</a> 
+    <a href="#" class="forgot">forgot password?</a>
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+  </form> 
+
+  <div class="result">
+    <div class="serverFeedBack-color"><h2>{{serverFeedBack.message}}</h2></div>
+    <div *ngIf="serverFeedBack.error != ''" class="serverFeedBack-error-color"><h3>{{serverFeedBack.error}}</h3></div>
+  </div>
+  </div>
+</div>
+

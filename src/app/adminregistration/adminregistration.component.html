@@ -1,0 +1,33 @@
+
+
+<div class="adminregistration-bg-image">
+  <div class="register">
+    <h1>VHS Admin Registration</h1>
+    <form [formGroup]="registrationForm" (ngSubmit)="register(registrationForm)">
+        <button class="loginlink"><a routerLink="/admin/login">Login</a></button>
+        <div>
+          <input type="text" placeholder="Username" id="username" formControlName="username">
+        </div>
+        <div>
+          <input type="email" placeholder="Email" id="email" formControlName="email">
+        </div>
+        <div>
+          <input type="password" placeholder="Password" id="password" formControlName="password">
+        </div>
+        <div>
+          <input type="password" placeholder="Comfirm Password" id="password" formControlName="comfirmPassword">
+        </div>
+        <!-- <div> -->
+          <!-- <a routerLink="/admin/login" class="loginlink">Login</a> -->
+        <!-- </div> -->
+      <button type="submit" [disabled]="registrationForm.invalid">Register</button>
+    </form>
+
+    <div class="result">
+      <div *ngIf="serverFeedBack.message !== ''" class="serverFeedBack-color"><h2>{{serverFeedBack.message}}</h2></div>
+      <div *ngIf="serverFeedBack.error !== ''" class="serverFeedBack-error-color"><h4>{{serverFeedBack.error}}</h4></div>
+      <div *ngIf="passwordDoesnotMatch"><h4 class="passwordstatus-color">**Password Does not Match**</h4></div>
+    </div>
+  </div>
+</div>
+

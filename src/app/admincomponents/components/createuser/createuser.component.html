@@ -1,0 +1,68 @@
+<div>
+  <div class="container">
+    <h1>Create User</h1>
+    <form [formGroup]="userForm" (ngSubmit)="createuser(userForm)">
+      <div class="row">
+        <div class="col-25">
+          <label for="username">Username</label>
+        </div>
+        <div class="col-75">
+          <input type="text"  placeholder="Username" formControlName="username" required>
+          <!-- <div>
+            <span *ngIf="username.length < 5" class="createUser-warning">Username Min Length is 6</span>
+            <span *ngIf="username.touched && username.invalid" class="createUser-warning">Username is required</span>
+          </div> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="email">Email</label>
+        </div>
+        <div class="col-75">
+          <input type="email" placeholder="Email" formControlName="email" required>
+          <!-- <div>
+            <span *ngIf="email.touched && email.require" class="createUser-warning">Email is required</span>
+            <span *ngIf="email.touched && email.invalid" class="createUser-warning">Invalid Email</span>
+          </div> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="password">Password</label>
+        </div>
+        <div class="col-75">
+          <input type="password" placeholder="Password" formControlName="password">
+          <!-- <div>
+            <span *ngIf="password.minlength < 5" class="createUser-warning">Password Min Length is 6</span>
+            <span *ngIf="password.touched && password.invalid" class="createUser-warning">Password is required</span>
+          </div> -->
+        </div>
+      </div>
+      <!-- </div> -->
+      <div class="row">
+        <div class="col-25">
+          <label for="confirmPassword">Confirm Password</label>
+        </div>
+        <div class="col-75">
+          <input type="password" placeholder="Confirm Password" formControlName="confirmPassword">
+          <!-- <div>
+            <span *ngIf="confirmPassword.minlength < 5" class="createUser-warning">ConfirmPassword Min Length is 6</span>
+            <span *ngIf="confirmPassword.touched && confirmPassword.invalid" class="createUser-warning">ConfirmPassword is required</span>
+          </div> -->
+        </div>
+        </div>
+      <!-- </div> -->
+      
+      <div class="row">
+        <!-- <input type="submit" value="Submit"> -->
+        <button type="submit" [disabled]="userForm.invalid">Create</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="createuser-message-wrapper">
+    <div *ngIf="passwordMatch === true" class="passwordMatch"><h1>**Password does not match**</h1></div>
+    <div *ngIf="backendFeedback.message" class="message"><h1>{{backendFeedback.message}}</h1></div>
+    <div *ngIf="backendFeedback.error" class="error"><h1>**{{backendFeedback.error}}**</h1></div>
+  </div>
+</div>

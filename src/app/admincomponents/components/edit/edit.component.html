@@ -1,0 +1,34 @@
+<div>
+    <div class="container">
+      <h1>Edit User</h1>
+      <form [formGroup]="useredit" (ngSubmit)="updateuser()">
+        <div class="row">
+          <div class="col-25">
+            <label for="username">Username</label>
+          </div>
+          <div class="col-75">
+            <input type="text" formControlName="username">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="email">Email</label>
+          </div>
+          <div class="col-75">
+            <input type="email" formControlName="email">
+          </div>
+        </div>
+        
+        <div class="row">
+          <!-- <input type="submit" value="Submit"> -->
+          <button type="submit">Update</button>
+        </div>
+      </form>
+    </div>
+  
+    <div class="createuser-message-wrapper">
+      <div *ngIf="backendFeedback.message" class="message"><h1>{{backendFeedback.message}}</h1></div>
+      <div *ngIf="backendFeedback.error" class="error"><h1>**{{backendFeedback.error}}**</h1></div>
+      <div *ngIf="formError !== ''" class="error"><h1>**{{formError}}**</h1></div>
+    </div>
+  </div>
